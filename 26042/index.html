@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>关于求生之路2服务器motd（今日消息）和host的自定义法 | 桂木咲の日记</title><meta name="author" content="桂木咲,rema11ning@gmail.com"><meta name="copyright" content="桂木咲"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="motd支持的类型 motd&#x2F;host支持纯文本，图片外链和html外链 motd&#x2F;host疑似仅支持http，而不支持https 纯文本可略，即直接在相关文件写入即可，我们直接说明通过图片外链和html外链自定义motd&#x2F;host的方法。 图片外链 （或许失效，有人成功了可以告诉我） 这里介绍两种方法  使用github  首先需要注册一个github账号，点击&quot;New reposit">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于求生之路2服务器motd（今日消息）和host的自定义法">
+<meta property="og:url" content="http://blog.katsuragi.club/26042/index.html">
+<meta property="og:site_name" content="桂木咲の日记">
+<meta property="og:description" content="motd支持的类型 motd&#x2F;host支持纯文本，图片外链和html外链 motd&#x2F;host疑似仅支持http，而不支持https 纯文本可略，即直接在相关文件写入即可，我们直接说明通过图片外链和html外链自定义motd&#x2F;host的方法。 图片外链 （或许失效，有人成功了可以告诉我） 这里介绍两种方法  使用github  首先需要注册一个github账号，点击&quot;New reposit">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://blog.katsuragi.club/img/motd.jpg">
+<meta property="article:published_time" content="2022-12-20T00:07:35.000Z">
+<meta property="article:modified_time" content="2024-04-06T20:38:00.000Z">
+<meta property="article:author" content="桂木咲">
+<meta property="article:tag" content="L4D2">
+<meta property="article:tag" content="游戏">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.katsuragi.club/img/motd.jpg"><link rel="shortcut icon" href="/img/favicon1.png"><link rel="canonical" href="http://blog.katsuragi.club/26042/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '关于求生之路2服务器motd（今日消息）和host的自定义法',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-04-07 04:38:00'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/notfound.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><span> Books</span></a></div><div class="menus_item"><a class="site-page" href="/songs/"><span> Songs</span></a></div><div class="menus_item"><a class="site-page" href="/information/"><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/motd.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="桂木咲の日记"><span class="site-name">桂木咲の日记</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><span> Books</span></a></div><div class="menus_item"><a class="site-page" href="/songs/"><span> Songs</span></a></div><div class="menus_item"><a class="site-page" href="/information/"><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">关于求生之路2服务器motd（今日消息）和host的自定义法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-12-20T00:07:35.000Z" title="Created 2022-12-20 08:07:35">2022-12-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-04-06T20:38:00.000Z" title="Updated 2024-04-07 04:38:00">2024-04-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="关于求生之路2服务器motd（今日消息）和host的自定义法"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>motd支持的类型</h1>
+<p>motd/host支持纯文本，图片外链和html外链</p>
+<p>motd/host疑似仅支持http，而不支持https</p>
+<p>纯文本可略，即直接在相关文件写入即可，我们直接说明通过图片外链和html外链自定义motd/host的方法。</p>
+<h1>图片外链 （或许失效，有人成功了可以告诉我）</h1>
+<p>这里介绍两种方法</p>
+<ul>
+<li>使用github</li>
+</ul>
+<p>首先需要注册一个github账号，点击&quot;New repository&quot;新创建一个仓库，同时要记住勾选add a readme file，否则你可能需要通过git上传文件</p>
+<p><img src="/img/motd-screenshot1.PNG" alt="create repo"></p>
+<p>之后通过add a file上传你的图片，图片最好横纵比为2:1，例如1440*720</p>
+<p>上传完毕后点击仓库中的settings，找到pages选项</p>
+<p><img src="/img/motd-screenshot2.PNG" alt="find page"></p>
+<pre> http://katsuragisaki.github.io/l4d2motd/ </pre>这个就是我的页面，于是图片路径为：
+<pre> http://katsuragisaki.github.io/l4d2motd/图片名.图片格式 </pre>
+<p>直接放入my motd.txt中保存即可。</p>
+<ul>
+<li>使用图床（推荐）</li>
+</ul>
+<p>简单，快捷，易用。图片要求同样为2:1，随便寻找一个公共图床上传，然后复制url链接写入my motd.txt种即可。</p>
+<h1>html外链 （推荐）</h1>
+<p>html这里给出一个模板:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span>TheMotd<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span> <span class="attr">style</span>=<span class="string">&quot;margin:0px;padding:0px;background:#000000;overflow-y: hidden;&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://xx.com/motd.png&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width:100%;height:100%;&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">noframes</span>&gt;</span> <span class="tag">&lt;/<span class="name">noframes</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">noscript</span>&gt;</span> <span class="tag">&lt;/<span class="name">noscript</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>host同理</p>
+<p>html相关的教程可参考:<a target="_blank" rel="noopener" href="https://www.runoob.com/html/html-tutorial.html">https://www.runoob.com/html/html-tutorial.html</a></p>
+<p>同样给出两种方法</p>
+<ul>
+<li>使用github（不稳定）</li>
+</ul>
+<p>基本同上，最终写入motd的格式为</p>
+<pre> http://katsuragisaki.github.io/l4d2motd/motd.html </pre>
+<ul>
+<li>使用云服（推荐）</li>
+</ul>
+<p>利用nginx或apache部署静态html</p>
+<p>详细教程参考:<a target="_blank" rel="noopener" href="https://www.cnblogs.com/feigen/p/11511492.html">https://www.cnblogs.com/feigen/p/11511492.html</a></p>
+<p>这里简单介绍一下，以nginx为例：<br>
+首先更新服务器的软件包<br>
+使用xshell等远程访问软件登录上你的服务器，之后在root用户下依次键入</p>
+<pre>sudo apt-get update
+sudo apt-get upgrade</pre>
+<p>然后安装nginx</p>
+<pre> apt-get install nginx </pre>
+<p>安装好后打开浏览器（记得要开放服务器的80端口，如果你一开始就开放了所有端口可以忽略），在网址栏输入你的服务器ip或绑定的域名，如果成功将会看到nginx的欢迎页。<br>
+之后打开xftp等远程文件访问软件，登录上服务器，将你的motd.html以及host.html放入/var/www/html/中。（特别地，你在html中写入的&lt; img &gt;那一栏中src的图片如果在同一目录下可以直接写为src=“motd.png”）<br>
+然后在服务器的my motd文件中填入<pre>http://your_ip/motd.html</pre><br>
+然后重启服务器就大功告成啦！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://blog.katsuragi.club">桂木咲</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://blog.katsuragi.club/26042/">http://blog.katsuragi.club/26042/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/L4D2/">L4D2</a><a class="post-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F/">游戏</a></div><div class="post_share"></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>Sponsor</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/41633/" title="关于巴门尼德存在(being)学说的心得"><img class="cover" src="/img/bmndxs.jpg" onerror="onerror=null;src='/img/notfound.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">关于巴门尼德存在(being)学说的心得</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/notfound.jpg'" alt="avatar"/></div><div class="author-info__name">桂木咲</div><div class="author-info__description">Der Mensch kann zwar tun, was er will, aber er kann nicht wollen, was er will.</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><a id="card-info-btn" href="mailto:ra11n@foxmail.com"><i class="fas fa-envelope"></i><span>Contact Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:rema11ning@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://steamcommunity.com/id/KatsuragiSaki/" target="_blank" title="Steam"><i class="fa-brands fa-steam"></i></a><a class="social-icon" href="https://space.bilibili.com/1678897161" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">博学之，审问之，慎思之，明辨之，笃行之。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">motd支持的类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">图片外链 （或许失效，有人成功了可以告诉我）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">html外链 （推荐）</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/730c/" title="逻辑学导论15th习题1.4"><img src="/img/logic_exercises.jpg" onerror="this.onerror=null;this.src='/img/notfound.jpg'" alt="逻辑学导论15th习题1.4"/></a><div class="content"><a class="title" href="/730c/" title="逻辑学导论15th习题1.4">逻辑学导论15th习题1.4</a><time datetime="2024-07-07T10:24:00.000Z" title="Created 2024-07-07 18:24:00">2024-07-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/718c/" title="逻辑学导论15th习题1.2"><img src="/img/logic_exercises.jpg" onerror="this.onerror=null;this.src='/img/notfound.jpg'" alt="逻辑学导论15th习题1.2"/></a><div class="content"><a class="title" href="/718c/" title="逻辑学导论15th习题1.2">逻辑学导论15th习题1.2</a><time datetime="2024-07-05T14:58:35.000Z" title="Created 2024-07-05 22:58:35">2024-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/f82e/" title="关于域的知识梳理"><img src="/img/field.jpg" onerror="this.onerror=null;this.src='/img/notfound.jpg'" alt="关于域的知识梳理"/></a><div class="content"><a class="title" href="/f82e/" title="关于域的知识梳理">关于域的知识梳理</a><time datetime="2023-10-24T20:42:15.000Z" title="Created 2023-10-25 04:42:15">2023-10-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/41633/" title="关于巴门尼德存在(being)学说的心得"><img src="/img/bmndxs.jpg" onerror="this.onerror=null;this.src='/img/notfound.jpg'" alt="关于巴门尼德存在(being)学说的心得"/></a><div class="content"><a class="title" href="/41633/" title="关于巴门尼德存在(being)学说的心得">关于巴门尼德存在(being)学说的心得</a><time datetime="2023-09-27T03:59:00.000Z" title="Created 2023-09-27 11:59:00">2023-09-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/26042/" title="关于求生之路2服务器motd（今日消息）和host的自定义法"><img src="/img/motd.jpg" onerror="this.onerror=null;this.src='/img/notfound.jpg'" alt="关于求生之路2服务器motd（今日消息）和host的自定义法"/></a><div class="content"><a class="title" href="/26042/" title="关于求生之路2服务器motd（今日消息）和host的自定义法">关于求生之路2服务器motd（今日消息）和host的自定义法</a><time datetime="2022-12-20T00:07:35.000Z" title="Created 2022-12-20 08:07:35">2022-12-20</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/motd.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By 桂木咲</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">The empty vessels make the greatest sound.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
