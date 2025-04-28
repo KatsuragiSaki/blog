@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="loading.css">
         <script>
             MathJax = {
               tex: {
@@ -13,13 +14,39 @@
         <title>恭喜你发现了测试网页！</title>
     </head>
     <body>
-        <main>
-            <h1>测试网页</h1>
-                <p> 勾股定理 $a^2 + b^2 = c^2$ </p>
-                <div>
-                    二次方程求根公式：
-                    \[ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
-                  </div>
-        </main>
+         <!-- 加载动画容器 -->
+    <div id="loading-overlay">
+      <div class="loading-text" data-text="LOADING...">LOADING...</div>
+  </div>
+
+  <!-- 实际页面内容 -->
+    <main id="page-content">
+    <h1>测试网页</h1>
+        <p> 勾股定理 $a^2 + b^2 = c^2$ </p>
+        <div>
+            二次方程求根公式：
+            \[ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
+            定积分公式：
+            \[ \int_{a}^{b}f(x)dx \]
+        </div>
+          
+    </main>
+          <!-- 其他HTML内容 -->
+        <script>
+          // 控制逻辑保持不变
+          window.addEventListener('load', function() {
+          document.getElementById('page-content').style.opacity = '1';
+          setTimeout(() => {
+              document.getElementById('loading-overlay').remove();
+          }, 300);
+      });
+
+      // 超时强制显示（可选）
+          setTimeout(() => {
+              document.getElementById('page-content').style.opacity = '1';
+          const loader = document.getElementById('loading-overlay');
+          if (loader) loader.remove();
+      }, 5000);
+        </script>
     </body>
 </html>
